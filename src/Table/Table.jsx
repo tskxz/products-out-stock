@@ -6,7 +6,7 @@ function Table(props){
         <tr key={item.name}>
             <td>{item.name}</td>
             <td>{item.price}</td>
-            <td>{item.stock === 0 ? (<td>Out of Stock</td>) : (item.stock)}</td>
+            <td>{item.stock === 0 ? (<td className='out-stock'>Out of Stock</td>) : (<td className='have-stock'>{item.stock}</td>)}</td>
         </tr>
     );
 
