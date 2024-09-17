@@ -1,33 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Table from './Table/Table';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const products = [
+    { name: 'Aluminium', price: 4.99, stock: 100 },
+    { name: 'Steel', price: 2.99, stock: 500 },
+    { name: 'Iron', price: 5.99, stock: 525 },
+    { name: 'Cooper', price: 7.99, stock: 0 },
+  ]
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Products</h1>
+      <Table item={products}></Table>
     </>
   )
 }
